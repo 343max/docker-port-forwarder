@@ -12,7 +12,7 @@ container=$2
 port=$3
 
 # SSH into the host and run docker inspect on the container
-container_ip=$(ssh $host "docker inspect $container" | jq -r '.[0].NetworkSettings.Networks[].IPAddress')
+container_ip=$(ssh $host "docker inspect $container" | jq -r '.[0].NetworkSettings.Networks[].IPAddress' | head -n 1)
 
 echo "Forwarding port $port from $container ($container_ip) on $host to localhost..."
 
