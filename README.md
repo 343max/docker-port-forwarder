@@ -33,3 +33,7 @@ docker-port-forwarder 343max.de nginx 80 8088
 ## Installation
 
 you might copy `docker-port-forwarder.sh` into your path or clone this repo and add the path to your `$PATH`
+
+## Requirements:
+
+`jq`
